@@ -27,7 +27,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routing
-
 module.exports = function(app) {
     // API get request
 
