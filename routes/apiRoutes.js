@@ -1,6 +1,3 @@
-// set up server (done)  (with express rather than http, handle request, etc)
-// get response from the server (done) (listener is responding properly)
-
 // * The following API routes should be created:
 //   * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 //   * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
@@ -32,9 +29,10 @@ module.exports = function (app) {
         // receive new note to save on request body
         var newNote = req.body;
         // add note to db.json file
-
-        console.log(newNote);
+        // var uniqueID = (noteData.length).toString();
+        // newNote.id = uniqueID;
         noteData.push(newNote);
+        // var noteData = fs.readFileSync("./db/db.json", "utf-8");
         // return new note to client
         res.json(newNote);
     })
@@ -44,8 +42,10 @@ module.exports = function (app) {
     // Find a way to give each note a unique `id` when it's saved.
     // In order to delete a note, you'll need to: 
     app.delete("/api/notes/:id", function (req, res) {
-        console.log('message');
-        res.json(res);
+        console.log(noteData);
+        const { id } = req.params;
+        console.log(id);
+        // res.json(res);
         // read all notes from the `db.json` file, 
         // fs.readFile('../db/db.json');
         // remove the note with the given `id` property, and the
