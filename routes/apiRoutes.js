@@ -8,11 +8,10 @@
 
 // Loading data
 // link routes to a series of "data" sources
-const noteData = require("../db/db.json");
+var noteData = require("../db/db.json");
 // const index = require('../public/assets/js/index');
 
-// including filesystem to read files 
-const fs = require('fs');
+var fs = require('fs');
 
 // Routing
 module.exports = function (app) {
@@ -20,30 +19,32 @@ module.exports = function (app) {
     // GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
     app.get("/api/notes", function (req, res) {
         // read db.json file
-        // res.json();
+        res.json(noteData);
         // return all saved notes as json
-        return res.json(res);
+        // return res.json(res);
     })
 
     // API post request
     // POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 
-    app.post("/api/notes", (req, res) => {
+    app.post("/api/notes", function (req, res) {
         // receive new note to save on request body
         var newNote = req.body;
         // add note to db.json file
-        res.push(newNote);
+        noteData.push(newNote);
         // return new note to client
-        return res.json();
+        return newNote;
     })
 
     // DELETE `/api/notes/:id`
     // Should receive a query parameter containing the id of a note to delete
     // Find a way to give each note a unique `id` when it's saved.
     // In order to delete a note, you'll need to: 
-    app.delete("", function (req, res) {
+    app.delete("/api/notes/:id", function (req, res) {
         // read all notes from the `db.json` file, 
+        fs.readFile('../db/db.json');
         // remove the note with the given `id` property, and the
+
         // rewrite the notes to the `db.json` file
     })
 };
