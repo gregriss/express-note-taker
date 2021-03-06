@@ -28,12 +28,15 @@ module.exports = function (app) {
     // POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 
     app.post("/api/notes", function (req, res) {
+        
         // receive new note to save on request body
         var newNote = req.body;
         // add note to db.json file
+
+        console.log(newNote);
         noteData.push(newNote);
         // return new note to client
-        return newNote;
+        res.json(newNote);
     })
 
     // DELETE `/api/notes/:id`
@@ -41,8 +44,10 @@ module.exports = function (app) {
     // Find a way to give each note a unique `id` when it's saved.
     // In order to delete a note, you'll need to: 
     app.delete("/api/notes/:id", function (req, res) {
+        console.log('message');
+        res.json(res);
         // read all notes from the `db.json` file, 
-        fs.readFile('../db/db.json');
+        // fs.readFile('../db/db.json');
         // remove the note with the given `id` property, and the
 
         // rewrite the notes to the `db.json` file
