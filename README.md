@@ -32,11 +32,11 @@
 
   Type text into the `Note Title` field, and your note content into the `Note Text` field.  
 
-  ![Initial Notes Page](.public/assets/images/notes-initial.png)  
+  ![Initial](./public/assets/images/notes-initial.png)  
 
   A white Save icon will appear which you can click to save the note, and a red Trash icon appears next to each note you've saved, which allows you to delete individual notes at will. Click a note's text to view it's content in the active note field.
 
-  ![Notes In Use](.public/assets/images/notes-page.png)  
+  ![Notes In Use](./public/assets/images/notes-page.png)  
 
   The Deployed app on Heroku can be found here:  
   https://ancient-thicket-64595.herokuapp.com/
@@ -57,6 +57,6 @@
 
   If you have any questions, feel free to reach out to me.
 
-  [GitHub profile](https://github.com/gregriss)
+  [My GitHub](https://github.com/gregriss)
 
-  [Email](mailto:gregriss23@gmail.com)
+  [My Email](mailto:gregriss23@gmail.com)
