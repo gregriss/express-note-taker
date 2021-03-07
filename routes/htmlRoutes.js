@@ -1,6 +1,5 @@
 // including path package to get file paths
 var path = require('path');
-// const fs = require('fs');
 
 module.exports = function (app) {
     // GET `/notes` returns `notes.html` file
