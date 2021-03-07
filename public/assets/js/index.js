@@ -8,7 +8,7 @@ const $noteList = $(".list-container .list-group");
 let activeNote = {};
 
 // giving each note an id
-let $noteId = 1;
+// let $noteId = 1;
 
 // A function for getting all notes from the db
 const getNotes = () => {
@@ -58,13 +58,13 @@ const handleNoteSave = function () {
   const newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
-    id: $noteId
+    // id: $noteId ++
   };
 
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
-    $noteId ++;
+    // $noteId ++;
   });
 };
 
@@ -79,7 +79,7 @@ const handleNoteDelete = function (event) {
     activeNote = {};
   }
 
-  deleteNote($noteId).then(() => {
+  deleteNote(note.id).then(() => {
     getAndRenderNotes();
     renderActiveNote();
   });
