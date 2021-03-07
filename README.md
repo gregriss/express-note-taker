@@ -28,16 +28,18 @@
 
   Simply click the `Get Started` button, and then you can begin writing, deleting, or refering back to previous notes at your leisure.  
 
-  [Homepage](./public/assets/images/homepage.png)  
+  ![Homepage](./public/assets/images/homepage.png)  
 
   Type text into the `Note Title` field, and your note content into the `Note Text` field.  
 
-  [Initial Notes Page](.public/assets/images/notes-initial.png)  
+  ![Initial Notes Page](.public/assets/images/notes-initial.png)  
 
   A white Save icon will appear which you can click to save the note, and a red Trash icon appears next to each note you've saved, which allows you to delete individual notes at will. Click a note's text to view it's content in the active note field.
 
-  [Notes In Use](.public/assets/images/notes-page.png)
+  ![Notes In Use](.public/assets/images/notes-page.png)  
 
+  The Deployed app on Heroku can be found here:  
+  https://ancient-thicket-64595.herokuapp.com/
 
   ## License
 
